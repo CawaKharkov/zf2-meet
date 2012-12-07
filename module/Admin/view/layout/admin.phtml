@@ -1,0 +1,38 @@
+<?php echo $this->doctype(); ?>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <?php echo $this->headTitle('Главная')->setSeparator(' - ')->setAutoEscape(false) ?>
+        <?php echo $this->headMeta()->appendName('viewport', 'width=device-width, initial-scale=1.0') ?>
+        <?php echo $this->headLink(array('rel' => 'shortcut icon', 'type' => 'image/vnd.microsoft.icon', 'href' => $this->basePath() . '/images/favicon.ico')) ?>
+        <?php echo $this->headScript() . PHP_EOL ?>
+
+    </head>
+    <body>
+
+        <div class="header">
+            <!-- Logo -->
+            <div id="site_title"><a href="index.html"><img src="/img/logo.png" /></a></div>
+
+            <!-- Main Menu -->
+            <?php echo $this->partial('/partials/main_menu') ?>
+
+        </div><!-- END header -->
+
+
+        <div id="container" style="min-height: 600px;">
+
+            <?php echo $this->layout()->content ?>
+        </div>
+        <!-- END container -->
+
+
+        <div id="footer">
+
+          <?php echo $this->partial('/partials/footer') ?>
+        </div> <!-- END footer -->
+
+    </body>
+
+</html>

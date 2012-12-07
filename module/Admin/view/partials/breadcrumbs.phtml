@@ -1,0 +1,12 @@
+<ul class="breadcrumb">
+    <?php foreach($this->pages as $page) : ?>
+    <li<?php echo $page->isActive() ? ' class="active"' : '' ?>>
+    <?php if (!$page->isActive()) : ?>
+        <a href="<?php echo $this->url($page->route) ?>"><?php echo $page->label ?></a>
+        <span class="divider">/</span>
+    <?php else : ?>
+        <?php echo $page->label ?>
+    <?php endif ?>
+    </li>
+    <?php endforeach ?>
+</ul>

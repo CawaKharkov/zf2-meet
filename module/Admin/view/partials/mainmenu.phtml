@@ -1,0 +1,36 @@
+<div class="well sidebar-menu">
+    <ul class="nav nav-list">
+        <li class="nav-header"><?php echo $this->_('NAV_ADMIN_MAIN_TITLE')?></li>
+        <?php
+        foreach ($this->container as $page) {
+
+            if ($page->pages) {
+                ?>
+
+                <li><?php echo $this->navigation()->menu()->htmlify($page), PHP_EOL; ?></li>
+                <ul class="nav nav-list">
+                    <?php
+                    foreach ($page->pages as $subpage) {
+
+                        echo '<li';
+                        if ($subpage->isActive())
+                            echo ' class="active"';
+                        echo '>';
+                        echo $this->navigation()->menu()->htmlify($subpage), PHP_EOL;
+                        echo '</li>';
+                    }
+
+                    echo '</ul>';
+                } else {
+                    echo '<li';
+                    if ($page->_active)
+                        echo ' class="active"';
+                    echo '>';
+
+                    echo $this->navigation()->menu()->htmlify($page), PHP_EOL;
+                    echo '</li>';
+                }
+            }
+            ?>
+        </ul>
+</div>
