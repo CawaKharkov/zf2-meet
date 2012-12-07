@@ -1,0 +1,5 @@
+Файлег копируем в
+.git/hooks
+делаем
+chmod +x sp-app/.git/hooks/pre-commit
+chmod +x sp-api/.git/hooks/pre-commit
