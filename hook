@@ -1,0 +1,4 @@
+Файлег pre-commit копируем в
+.git/hooks
+делаем
+chmod +x /.git/hooks/pre-commit
