@@ -1,0 +1,17 @@
+#!/bin/sh
+# Git pre-commit hook to confirm ZF2 code style
+# Install under: zf2/.git/hooks/pre-commit (and ensure it is executable)
+
+PROJECTROOT=`echo $(cd ${0%/*}/../../ && pwd -P)`/
+FIXER=php-cs-fixer
+
+RES=`${FIXER} fix $PROJECTROOT -v --dry-run --level=psr2`
+if [ "$RES" != "" ]; then
+    echo "ZF2 Coding standards are not correct, cancelling your commit."
+    echo ""
+    echo $RES
+    echo ""
+    echo "Fix these to be able to commit"
+    echo ""
+    exit 1
+fi

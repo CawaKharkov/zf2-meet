@@ -48,7 +48,7 @@ class Module
 
         $helperManager->get('headmeta')->setCharset('utf-8')
                                        ->setName('viewport', 'width=device-width, initial-scale=1.0');
-        $helperManager->get('headtitle')->set('Автопортал');
+        $helperManager->get('headtitle')->set('freelance');
 
         $helperManager->get('headlink')->appendStylesheet('/menu/css/simple_menu.css')
                                        ->appendStylesheet('/style.css')

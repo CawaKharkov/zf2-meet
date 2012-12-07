@@ -16,7 +16,7 @@ use Doctrine\ORM\EntityManager;
  *
  * @author cawa
  */
-class AdvController extends AbstractActionController 
+class AdvController extends AbstractActionController
 {
     /**
      * @var Doctrine\ORM\EntityManager
@@ -27,22 +27,22 @@ class AdvController extends AbstractActionController
     {
         $this->em = $em;
     }
-    
-    public function getEntityManager() {
+
+    public function getEntityManager()
+    {
         if (null === $this->em) {
             $this->em = $this->getServiceLocator()->get('doctrine.entitymanager.orm_default');
         }
         return $this->em;
     }
-    
-    public function indexAction() 
+
+    public function indexAction()
     {
-                
+
      return new ViewModel(array(
             'adv' => $this->getEntityManager()->getRepository('Test\Entity\Advertisment')->findAll()
         ));
     }
-    
-    
-}
 
+
+}

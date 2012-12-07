@@ -6,7 +6,7 @@ use Doctrine\ORM\Mapping as ORM;
 use Zend\InputFilter\InputFilter;
 use Zend\InputFilter\Factory as InputFactory;
 use Zend\InputFilter\InputFilterAwareInterface;
-use Zend\InputFilter\InputFilterInterface; 
+use Zend\InputFilter\InputFilterInterface;
 
 /**
 * A simple advertisment.
@@ -19,7 +19,7 @@ use Zend\InputFilter\InputFilterInterface;
 */
 class Advertisment implements InputFilterAwareInterface
 {
-    
+
     protected $inputFilter;
 
     /**
@@ -45,7 +45,8 @@ class Advertisment implements InputFilterAwareInterface
      * @param string $property
      * @return mixed
      */
-    public function __get($property) {
+    public function __get($property)
+    {
         return $this->$property;
     }
 
@@ -55,7 +56,8 @@ class Advertisment implements InputFilterAwareInterface
      * @param string $property
      * @param mixed $value
      */
-    public function __set($property, $value) {
+    public function __set($property, $value)
+    {
         $this->$property = $value;
     }
 
@@ -64,7 +66,8 @@ class Advertisment implements InputFilterAwareInterface
      *
      * @return array
      */
-    public function getArrayCopy() {
+    public function getArrayCopy()
+    {
         return get_object_vars($this);
     }
 
@@ -73,17 +76,18 @@ class Advertisment implements InputFilterAwareInterface
      *
      * @param array $data
      */
-    public function populate($data = array()) {
+    public function populate($data = array())
+    {
         $this->id = $data['id'];
         $this->artist = $data['text'];
         $this->title = $data['auhtor'];
     }
-    
+
      public function setInputFilter(InputFilterInterface $inputFilter)
     {
         throw new \Exception("Not used");
     }
-    
+
      public function getInputFilter()
     {
         if (!$this->inputFilter) {
@@ -141,6 +145,6 @@ class Advertisment implements InputFilterAwareInterface
         }
 
         return $this->inputFilter;
-    } 
+    }
 
 }
