@@ -48,19 +48,18 @@ class Module
 
         $helperManager->get('headmeta')->setCharset('utf-8')
                                        ->setName('viewport', 'width=device-width, initial-scale=1.0');
+        
         $helperManager->get('headtitle')->set('freelance');
 
-        $helperManager->get('headlink')->appendStylesheet('/menu/css/simple_menu.css')
+        $helperManager->get('headlink')->appendStylesheet('/css/foundation.min.css')
                                        ->appendStylesheet('/style.css')
-                                       ->appendStylesheet('/contact_form/css/style.css')
-                                       ->appendStylesheet('/contact_form/css/uniform.css')
-                                       ->appendStylesheet('/css/main.css');
+                                       ->appendStylesheet('/css/app.css');
 
         $helperManager->get('headscript')->appendFile('//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js')
-                                         ->appendFile('/js/bootstrap.min.js')
                                          ->appendFile('//ajax.googleapis.com/ajax/libs/jqueryui/1.9.0/jquery-ui.min.js')
-                                         ->appendFile('/js/jquery.tools.min.js')
-                                         ->appendFile('/js/main.js');
+                                         ->appendFile('/js/app.js')
+                                         ->appendFile('/js/modernizr.foundation.js')
+                                         ->appendFile('/js/foundation.min.js');
     }
 
 
