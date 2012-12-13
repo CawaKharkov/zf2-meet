@@ -11,9 +11,13 @@ namespace Application;
 
 use Zend\Mvc\ModuleRouteListener;
 use Zend\EventManager\EventInterface;
+use Zend\ModuleManager\Feature\AutoloaderProviderInterface;
 
 class Module
 {
+
+
+
     public function onBootstrap(EventInterface $e)
     {
         $eventManager        = $e->getApplication()->getEventManager();
@@ -22,6 +26,9 @@ class Module
         $eventManager->attach('render', array($this, 'initView'));
         $eventManager->getSharedManager()->attach(
             'Zend\Mvc\Application', 'render', array($this, 'setLayout')
+        );
+        $eventManager->getSharedManager()->attach(
+            'Zend\Mvc\Application', 'dispatch', array($this, 'mvcPreDispatch')
         );
     }
 
@@ -40,6 +47,14 @@ class Module
             ),
         );
     }
+    public function getServiceConfig()
+    {
+        return array(
+            'invokables' => array(
+                'AuthenticationEvent' => 'Application\Event\AuthenticationEvent',
+                'UserAuthenticationPlugin' => 'Application\Controller\Plugin\UserAuthentication'
+            ));
+    }
 
     public function initView(EventInterface $e)
     {
@@ -48,11 +63,10 @@ class Module
 
         $helperManager->get('headmeta')->setCharset('utf-8')
                                        ->setName('viewport', 'width=device-width, initial-scale=1.0');
-        
+
         $helperManager->get('headtitle')->set('freelance');
 
         $helperManager->get('headlink')->appendStylesheet('/css/foundation.min.css')
-                                       ->appendStylesheet('/style.css')
                                        ->appendStylesheet('/css/app.css');
 
         $helperManager->get('headscript')->appendFile('//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js')
@@ -79,6 +93,13 @@ class Module
         } elseif ($routeName == 'test' && isset($config['module_layouts']['test'])) {
             $viewHelperManager->get('layout')->setTemplate($config['module_layouts']['test']);
         }
+
+    }
+    public function mvcPreDispatch(EventInterface $e)
+    {
+         $sm = $e->getApplication()->getServiceManager();
+         $auth = $sm->get('AuthenticationEvent');
+         $auth->preDispatch($e);
 
     }
 }

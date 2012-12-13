@@ -38,8 +38,17 @@ return array(
                     ),
                 ),
             ),
-
-        ),
+            'user' => array(
+                'type' => 'Literal',
+                'options' => array(
+                    'route' => '/user',
+                    'defaults' => array(
+                        '__NAMESPACE__' => 'Application\Controller',
+                        'controller' => 'Application\Controller\UserController',
+                        'action' => 'index',
+                    ),
+                ),
+            ),),
     ),
     'service_manager' => array(
         'factories' => array(
@@ -59,6 +68,7 @@ return array(
     'controllers' => array(
         'invokables' => array(
             'Application\Controller\Index' => 'Application\Controller\IndexController',
+            'Application\Controller\UserController' => 'Application\Controller\UserController',
         ),
     ),
     'view_manager' => array(
