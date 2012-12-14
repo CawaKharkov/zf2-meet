@@ -36,8 +36,11 @@ class AuthenticationEvent
         if($userAuth->hasIdentity()){
             $member = $userAuth->getIdentity();
             $role = 'user';
-            $c = new \Zend\Session\Container('user');
-            $c->offsetSet('auth','true');
+            //$c = new \Zend\Session\Container();
+            //$c->offsetSet('auth',true);
+            setcookie("auth",$userAuth->getIdentity(),time()+3600);
+        }  else {
+            $role = 'guest';
         }
         if (!$acl->hasResource($controller)) {
             throw new \Exception('Resource ' . $controller . ' not defined');

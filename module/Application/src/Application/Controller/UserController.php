@@ -30,9 +30,8 @@ class UserController extends AbstractController
         $authAdapter->setTableName('identy')
                     ->setIdentityColumn('user')
                     ->setCredentialColumn('pass');
-        $c = new \Zend\Session\Container('user');
-        var_dump($c->offsetGet('auth'));
-        if($c->offsetGet('auth')==true){die('sucsess');}
+
+        if(@$_COOKIE["auth"]==$uAuth->getIdentity()){die('sucsess');}
         $user = isset($_GET['u'])? $_GET['u']:'no';
         $password = isset($_GET['p'])?$_GET['p']:'no';
 

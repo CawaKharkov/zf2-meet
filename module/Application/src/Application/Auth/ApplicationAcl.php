@@ -21,9 +21,11 @@ class ApplicationAcl extends Acl
         $this->addResource(new Resource('Application\Controller\UserController'));
         $this->addResource(new Resource('Test\Controller\Test'));
 
-        $this->allow('user','Application\Controller\UserController');
         $this->allow('guest','Application\Controller\UserController');
         $this->allow('guest','Application\Controller\Index');
+        $this->deny('guest','Test\Controller\Test');
+
+        $this->allow('user','Application\Controller\UserController');
         $this->allow('user','Application\Controller\Index');
         $this->allow('user','Test\Controller\Test');
     }
