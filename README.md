@@ -1,4 +1,3 @@
-freelance
+some functionality build on zf2
 =========
 
-Freelance portal
