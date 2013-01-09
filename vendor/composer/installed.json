@@ -1,131 +1,17 @@
 [
     {
-        "name": "doctrine/common",
-        "version": "2.3.0",
-        "version_normalized": "2.3.0.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/doctrine/common",
-            "reference": "2.3.0"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://github.com/doctrine/common/zipball/2.3.0",
-            "reference": "2.3.0",
-            "shasum": ""
-        },
-        "require": {
-            "php": ">=5.3.2"
-        },
-        "time": "2012-09-19 22:55:18",
-        "type": "library",
-        "extra": {
-            "branch-alias": {
-                "dev-master": "2.3.x-dev"
-            }
-        },
-        "installation-source": "dist",
-        "autoload": {
-            "psr-0": {
-                "Doctrine\\Common": "lib/"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Jonathan Wage",
-                "email": "jonwage@gmail.com",
-                "homepage": "http://www.jwage.com/"
-            },
-            {
-                "name": "Guilherme Blanco",
-                "email": "guilhermeblanco@gmail.com",
-                "homepage": "http://www.instaclick.com"
-            },
-            {
-                "name": "Roman Borschel",
-                "email": "roman@code-factory.org"
-            },
-            {
-                "name": "Benjamin Eberlei",
-                "email": "kontakt@beberlei.de"
-            },
-            {
-                "name": "Johannes Schmitt",
-                "email": "schmittjoh@gmail.com",
-                "homepage": "http://jmsyst.com",
-                "role": "Developer of wrapped JMSSerializerBundle"
-            }
-        ],
-        "description": "Common Library for Doctrine projects",
-        "homepage": "http://www.doctrine-project.org",
-        "keywords": [
-            "collections",
-            "spl",
-            "eventmanager",
-            "annotations",
-            "persistence"
-        ]
-    },
-    {
-        "name": "doctrine/data-fixtures",
-        "version": "v1.0.0-ALPHA3",
-        "version_normalized": "1.0.0.0-alpha3",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/doctrine/data-fixtures.git",
-            "reference": "v1.0.0-ALPHA3"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://github.com/doctrine/data-fixtures/zipball/v1.0.0-ALPHA3",
-            "reference": "v1.0.0-ALPHA3",
-            "shasum": ""
-        },
-        "require": {
-            "php": ">=5.3.2"
-        },
-        "time": "2012-09-20 03:26:34",
-        "type": "library",
-        "installation-source": "dist",
-        "autoload": {
-            "psr-0": {
-                "Doctrine\\Common\\DataFixtures": "lib/"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Jonathan Wage",
-                "email": "jonwage@gmail.com",
-                "homepage": "http://www.jwage.com/"
-            }
-        ],
-        "description": "Data Fixtures for all Doctrine Object Managers",
-        "homepage": "http://www.doctrine-project.org",
-        "keywords": [
-            "database"
-        ]
-    },
-    {
         "name": "zendframework/zendframework",
-        "version": "2.0.5",
-        "version_normalized": "2.0.5.0",
+        "version": "dev-develop",
+        "version_normalized": "dev-develop",
         "source": {
             "type": "git",
             "url": "git://github.com/zendframework/zf2.git",
-            "reference": "release-2.0.5"
+            "reference": "7c52c206e8fcbca67a93f2bfc84f4b047d07095e"
         },
         "dist": {
             "type": "zip",
-            "url": "https://github.com/zendframework/zf2/archive/release-2.0.5.zip",
-            "reference": "release-2.0.5",
+            "url": "https://github.com/zendframework/zf2/archive/7c52c206e8fcbca67a93f2bfc84f4b047d07095e.zip",
+            "reference": "7c52c206e8fcbca67a93f2bfc84f4b047d07095e",
             "shasum": ""
         },
         "require": {
@@ -191,7 +77,7 @@
             "zendframework/zendpdf": "ZendPdf for creating PDF representations of barcodes",
             "zendframework/zendservice-recaptcha": "ZendService\\ReCaptcha for rendering ReCaptchas in Zend\\Captcha and/or Zend\\Form"
         },
-        "time": "2012-11-29 15:32:02",
+        "time": "2013-01-08 21:02:36",
         "bin": [
             "bin/classmap_generator.php"
         ],
@@ -202,7 +88,7 @@
                 "dev-develop": "2.1-dev"
             }
         },
-        "installation-source": "dist",
+        "installation-source": "source",
         "autoload": {
             "psr-0": {
                 "Zend\\": "library/",
@@ -221,91 +107,36 @@
         ]
     },
     {
-        "name": "symfony/console",
-        "version": "v2.1.4",
-        "version_normalized": "2.1.4.0",
-        "target-dir": "Symfony/Component/Console",
+        "name": "zf-commons/zfc-base",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
         "source": {
             "type": "git",
-            "url": "https://github.com/symfony/Console",
-            "reference": "v2.1.4"
+            "url": "git://github.com/ZF-Commons/ZfcBase.git",
+            "reference": "38990ad5f51002dd271ab676b90a3d59728190e2"
         },
         "dist": {
             "type": "zip",
-            "url": "https://github.com/symfony/Console/archive/v2.1.4.zip",
-            "reference": "v2.1.4",
-            "shasum": ""
-        },
-        "require": {
-            "php": ">=5.3.3"
-        },
-        "time": "2012-11-09 08:52:51",
-        "type": "library",
-        "extra": {
-            "branch-alias": {
-                "dev-master": "2.1-dev"
-            }
-        },
-        "installation-source": "dist",
-        "autoload": {
-            "psr-0": {
-                "Symfony\\Component\\Console": ""
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Fabien Potencier",
-                "email": "fabien@symfony.com"
-            },
-            {
-                "name": "Symfony Community",
-                "homepage": "http://symfony.com/contributors"
-            }
-        ],
-        "description": "Symfony Console Component",
-        "homepage": "http://symfony.com"
-    },
-    {
-        "name": "doctrine/doctrine-module",
-        "version": "0.5.2",
-        "version_normalized": "0.5.2.0",
-        "source": {
-            "type": "git",
-            "url": "git://github.com/doctrine/DoctrineModule.git",
-            "reference": "0.5.2"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://github.com/doctrine/DoctrineModule/zipball/0.5.2",
-            "reference": "0.5.2",
+            "url": "https://github.com/ZF-Commons/ZfcBase/archive/38990ad5f51002dd271ab676b90a3d59728190e2.zip",
+            "reference": "38990ad5f51002dd271ab676b90a3d59728190e2",
             "shasum": ""
         },
         "require": {
             "php": ">=5.3.3",
-            "doctrine/common": ">=2.3-dev,<2.5-dev",
-            "doctrine/data-fixtures": "1.*",
-            "symfony/console": ">=2.0.13",
             "zendframework/zendframework": "2.*"
         },
-        "time": "2012-10-22 07:54:09",
-        "bin": [
-            "bin/doctrine-module"
-        ],
+        "time": "2012-10-24 17:42:28",
         "type": "library",
-        "installation-source": "dist",
+        "installation-source": "source",
         "autoload": {
             "psr-0": {
-                "DoctrineModule\\": "src/"
-            }
+                "ZfcBase": "src/"
+            },
+            "classmap": [
+                "./Module.php"
+            ]
         },
         "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
         "authors": [
             {
                 "name": "Kyle Spraggs",
@@ -313,64 +144,219 @@
                 "homepage": "http://www.spiffyjr.me/"
             },
             {
-                "name": "Marco Pivetta",
-                "email": "ocramius@gmail.com",
-                "homepage": "http://marco-pivetta.com/",
-                "role": "Developer"
+                "name": "Evan Coury",
+                "email": "me@evancoury.com",
+                "homepage": "http://blog.evan.pro/"
+            }
+        ],
+        "description": "A set of genetic (abstract) classes which are commonly used across multiple modules.",
+        "homepage": "https://github.com/ZF-Commons/ZfcBase",
+        "keywords": [
+            "zf2"
+        ]
+    },
+    {
+        "name": "zf-commons/zfc-user",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "git://github.com/ZF-Commons/ZfcUser.git",
+            "reference": "18c4fc2e71a53b558e1feec51c9c5fb10a070188"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://github.com/ZF-Commons/ZfcUser/archive/18c4fc2e71a53b558e1feec51c9c5fb10a070188.zip",
+            "reference": "18c4fc2e71a53b558e1feec51c9c5fb10a070188",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.3",
+            "zf-commons/zfc-base": "dev-master",
+            "zendframework/zendframework": "2.*"
+        },
+        "time": "2012-12-08 23:49:26",
+        "type": "library",
+        "installation-source": "source",
+        "autoload": {
+            "psr-0": {
+                "ZfcUser": "src/"
+            },
+            "classmap": [
+                "./Module.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "authors": [
+            {
+                "name": "Kyle Spraggs",
+                "email": "theman@spiffyjr.me",
+                "homepage": "http://www.spiffyjr.me/"
             },
             {
                 "name": "Evan Coury",
                 "email": "me@evancoury.com",
                 "homepage": "http://blog.evan.pro/"
+            }
+        ],
+        "description": "A generic user registration and authentication module for ZF2. Supports Zend\\Db and Doctrine2.",
+        "homepage": "https://github.com/ZF-Commons/ZfcUser",
+        "keywords": [
+            "zf2"
+        ]
+    },
+    {
+        "name": "bjyoungblood/bjy-authorize",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "git://github.com/bjyoungblood/BjyAuthorize.git",
+            "reference": "a47a2925109530d47b8cf5d30539692f869e4dfb"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://github.com/bjyoungblood/BjyAuthorize/archive/a47a2925109530d47b8cf5d30539692f869e4dfb.zip",
+            "reference": "a47a2925109530d47b8cf5d30539692f869e4dfb",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.3",
+            "zf-commons/zfc-base": "dev-master",
+            "zf-commons/zfc-user": "dev-master",
+            "zendframework/zendframework": "2.*"
+        },
+        "suggest": {
+            "zf-commons/zfc-user-doctrine-orm": "dev-master"
+        },
+        "time": "2012-12-19 19:22:38",
+        "type": "library",
+        "installation-source": "source",
+        "autoload": {
+            "psr-0": {
+                "BjyAuthorize": "src/"
+            },
+            "classmap": [
+                "./"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "authors": [
+            {
+                "name": "Ben Youngblood",
+                "email": "bx.youngblood@gmail.com",
+                "homepage": "http://bjyoungblood.com/"
+            }
+        ],
+        "description": "Easy-use loader and manager for Zend\\Acl with built-in route and dispatch protection",
+        "homepage": "https://github.com/bjyoungblood/BjyAuthorize",
+        "keywords": [
+            "zf2",
+            "acl",
+            "zfc-user"
+        ]
+    },
+    {
+        "name": "doctrine/common",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/doctrine/common",
+            "reference": "bc6bc47132613b28a58b7293dfd7872d9e3bcff3"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://github.com/doctrine/common/archive/bc6bc47132613b28a58b7293dfd7872d9e3bcff3.zip",
+            "reference": "bc6bc47132613b28a58b7293dfd7872d9e3bcff3",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.2"
+        },
+        "time": "2013-01-08 17:20:32",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "2.4.x-dev"
+            }
+        },
+        "installation-source": "source",
+        "autoload": {
+            "psr-0": {
+                "Doctrine\\Common\\": "lib/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Jonathan Wage",
+                "email": "jonwage@gmail.com",
+                "homepage": "http://www.jwage.com/"
             },
             {
                 "name": "Guilherme Blanco",
-                "email": "guilhermeblanco@hotmail.com"
+                "email": "guilhermeblanco@gmail.com",
+                "homepage": "http://www.instaclick.com"
             },
             {
-                "name": "Michaël Gallego",
-                "email": "mic.gallego@gmail.com",
-                "homepage": "http://www.michaelgallego.fr"
+                "name": "Roman Borschel",
+                "email": "roman@code-factory.org"
+            },
+            {
+                "name": "Benjamin Eberlei",
+                "email": "kontakt@beberlei.de"
+            },
+            {
+                "name": "Johannes M. Schmitt",
+                "email": "schmittjoh@gmail.com",
+                "homepage": "https://github.com/schmittjoh",
+                "role": "Developer of wrapped JMSSerializerBundle"
             }
         ],
-        "description": "Zend Framework 2 Module that provides Doctrine basic functionality required for ORM and ODM modules",
-        "homepage": "http://www.doctrine-project.org/",
+        "description": "Common Library for Doctrine projects",
+        "homepage": "http://www.doctrine-project.org",
         "keywords": [
-            "zf2",
-            "module",
-            "doctrine"
+            "collections",
+            "spl",
+            "eventmanager",
+            "annotations",
+            "persistence"
         ]
     },
     {
         "name": "doctrine/dbal",
-        "version": "2.3.1",
-        "version_normalized": "2.3.1.0",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
         "source": {
             "type": "git",
             "url": "https://github.com/doctrine/dbal",
-            "reference": "2.3.1"
+            "reference": "2f3377c0f28b276655a11ed54d0b2ac7ba5ad2d3"
         },
         "dist": {
             "type": "zip",
-            "url": "https://github.com/doctrine/dbal/archive/2.3.1.zip",
-            "reference": "2.3.1",
+            "url": "https://github.com/doctrine/dbal/archive/2f3377c0f28b276655a11ed54d0b2ac7ba5ad2d3.zip",
+            "reference": "2f3377c0f28b276655a11ed54d0b2ac7ba5ad2d3",
             "shasum": ""
         },
         "require": {
             "php": ">=5.3.2",
-            "doctrine/common": "2.3.*"
+            "doctrine/common": ">=2.3-dev,<2.5-dev"
         },
-        "time": "2012-12-04 21:06:56",
+        "time": "2013-01-08 15:37:28",
         "type": "library",
         "extra": {
             "branch-alias": {
-                "dev-master": "2.3.x-dev"
+                "dev-master": "2.4.x-dev"
             }
         },
-        "installation-source": "dist",
+        "installation-source": "source",
         "autoload": {
             "psr-0": {
-                "Doctrine\\DBAL": "lib/"
+                "Doctrine\\DBAL\\": "lib/"
             }
         },
         "notification-url": "https://packagist.org/downloads/",
@@ -463,30 +449,79 @@
         ]
     },
     {
-        "name": "doctrine/orm",
-        "version": "2.3.1",
-        "version_normalized": "2.3.1.0",
+        "name": "symfony/console",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "target-dir": "Symfony/Component/Console",
         "source": {
             "type": "git",
-            "url": "git://github.com/doctrine/doctrine2.git",
-            "reference": "2.3.1"
+            "url": "https://github.com/symfony/Console",
+            "reference": "v2.2.0-BETA1"
         },
         "dist": {
             "type": "zip",
-            "url": "https://github.com/doctrine/doctrine2/archive/2.3.1.zip",
-            "reference": "2.3.1",
+            "url": "https://github.com/symfony/Console/archive/v2.2.0-BETA1.zip",
+            "reference": "v2.2.0-BETA1",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.3"
+        },
+        "time": "2013-01-08 18:17:41",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "2.2-dev"
+            }
+        },
+        "installation-source": "source",
+        "autoload": {
+            "psr-0": {
+                "Symfony\\Component\\Console\\": ""
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Fabien Potencier",
+                "email": "fabien@symfony.com"
+            },
+            {
+                "name": "Symfony Community",
+                "homepage": "http://symfony.com/contributors"
+            }
+        ],
+        "description": "Symfony Console Component",
+        "homepage": "http://symfony.com"
+    },
+    {
+        "name": "doctrine/orm",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "git://github.com/doctrine/doctrine2.git",
+            "reference": "0b2d3d4f5d41c56fa07ff8d7ada406ec8bb34046"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://github.com/doctrine/doctrine2/archive/0b2d3d4f5d41c56fa07ff8d7ada406ec8bb34046.zip",
+            "reference": "0b2d3d4f5d41c56fa07ff8d7ada406ec8bb34046",
             "shasum": ""
         },
         "require": {
             "php": ">=5.3.2",
             "ext-pdo": "*",
-            "doctrine/dbal": "2.3.*",
-            "symfony/console": "2.*"
+            "symfony/console": "2.*",
+            "doctrine/dbal": ">=2.4-dev,<2.5-dev"
         },
         "suggest": {
             "symfony/yaml": "If you want to use YAML Metadata Mapping Driver"
         },
-        "time": "2012-12-04 22:04:25",
+        "time": "2013-01-06 18:16:12",
         "bin": [
             "bin/doctrine",
             "bin/doctrine.php"
@@ -494,13 +529,13 @@
         "type": "library",
         "extra": {
             "branch-alias": {
-                "dev-master": "2.3.x-dev"
+                "dev-master": "2.4.x-dev"
             }
         },
-        "installation-source": "dist",
+        "installation-source": "source",
         "autoload": {
             "psr-0": {
-                "Doctrine\\ORM": "lib/"
+                "Doctrine\\ORM\\": "lib/"
             }
         },
         "notification-url": "https://packagist.org/downloads/",
@@ -535,35 +570,88 @@
         ]
     },
     {
-        "name": "doctrine/doctrine-orm-module",
+        "name": "doctrine/data-fixtures",
         "version": "dev-master",
         "version_normalized": "9999999-dev",
         "source": {
             "type": "git",
-            "url": "git://github.com/doctrine/DoctrineORMModule.git",
-            "reference": "24830934f748497f77cf22f9af6cab4612fb0886"
+            "url": "https://github.com/doctrine/data-fixtures.git",
+            "reference": "50e7e644984f17038224f6fcd02c2b7c20147980"
         },
         "dist": {
             "type": "zip",
-            "url": "https://github.com/doctrine/DoctrineORMModule/archive/24830934f748497f77cf22f9af6cab4612fb0886.zip",
-            "reference": "24830934f748497f77cf22f9af6cab4612fb0886",
+            "url": "https://github.com/doctrine/data-fixtures/archive/50e7e644984f17038224f6fcd02c2b7c20147980.zip",
+            "reference": "50e7e644984f17038224f6fcd02c2b7c20147980",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.2",
+            "doctrine/common": ">=2.2,<2.5-dev"
+        },
+        "require-dev": {
+            "doctrine/orm": ">=2.2,<2.5-dev"
+        },
+        "suggest": {
+            "doctrine/orm": "For loading ORM fixtures",
+            "doctrine/mongodb-odm": "For loading MongoDB ODM fixtures",
+            "doctrine/phpcr-odm": "For loading PHPCR ODM fixtures"
+        },
+        "time": "2013-01-05 13:05:52",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "1.0.x-dev"
+            }
+        },
+        "installation-source": "source",
+        "autoload": {
+            "psr-0": {
+                "Doctrine\\Common\\DataFixtures": "lib/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Jonathan Wage",
+                "email": "jonwage@gmail.com",
+                "homepage": "http://www.jwage.com/"
+            }
+        ],
+        "description": "Data Fixtures for all Doctrine Object Managers",
+        "homepage": "http://www.doctrine-project.org",
+        "keywords": [
+            "database"
+        ]
+    },
+    {
+        "name": "doctrine/doctrine-module",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "git://github.com/doctrine/DoctrineModule.git",
+            "reference": "1cd6f814e6f7c1f2b2e7fbc7a7ea0d283bc7c96c"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://github.com/doctrine/DoctrineModule/archive/1cd6f814e6f7c1f2b2e7fbc7a7ea0d283bc7c96c.zip",
+            "reference": "1cd6f814e6f7c1f2b2e7fbc7a7ea0d283bc7c96c",
             "shasum": ""
         },
         "require": {
             "php": ">=5.3.3",
-            "doctrine/orm": ">=2.3-dev,<2.5-dev",
-            "doctrine/dbal": ">=2.3-dev,<2.5-dev",
+            "symfony/console": ">=2.0.13",
+            "doctrine/common": ">=2.3-dev,<2.5-dev",
             "zendframework/zendframework": "2.*",
-            "doctrine/migrations": "1.*",
-            "doctrine/doctrine-module": ">=0.5.1"
+            "doctrine/data-fixtures": "1.*"
         },
-        "require-dev": {
-            "zendframework/zend-developer-tools": "dev-master"
-        },
-        "suggest": {
-            "zendframework/zend-developer-tools": "zend-developer-tools if you want to profile operations executed by the ORM during development"
-        },
-        "time": "2012-12-06 19:52:20",
+        "time": "2012-12-16 21:40:55",
+        "bin": [
+            "bin/doctrine-module"
+        ],
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -571,6 +659,87 @@
             }
         },
         "installation-source": "source",
+        "autoload": {
+            "psr-0": {
+                "DoctrineModule\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Kyle Spraggs",
+                "email": "theman@spiffyjr.me",
+                "homepage": "http://www.spiffyjr.me/"
+            },
+            {
+                "name": "Marco Pivetta",
+                "email": "ocramius@gmail.com",
+                "homepage": "http://marco-pivetta.com/",
+                "role": "Developer"
+            },
+            {
+                "name": "Evan Coury",
+                "email": "me@evancoury.com",
+                "homepage": "http://blog.evan.pro/"
+            },
+            {
+                "name": "Guilherme Blanco",
+                "email": "guilhermeblanco@hotmail.com"
+            },
+            {
+                "name": "Michaël Gallego",
+                "email": "mic.gallego@gmail.com",
+                "homepage": "http://www.michaelgallego.fr"
+            }
+        ],
+        "description": "Zend Framework 2 Module that provides Doctrine basic functionality required for ORM and ODM modules",
+        "homepage": "http://www.doctrine-project.org/",
+        "keywords": [
+            "zf2",
+            "module",
+            "doctrine"
+        ]
+    },
+    {
+        "name": "doctrine/doctrine-orm-module",
+        "version": "0.5.6",
+        "version_normalized": "0.5.6.0",
+        "source": {
+            "type": "git",
+            "url": "git://github.com/doctrine/DoctrineORMModule.git",
+            "reference": "0.5.6"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://github.com/doctrine/DoctrineORMModule/archive/0.5.6.zip",
+            "reference": "0.5.6",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.3",
+            "doctrine/doctrine-module": ">=0.5.1",
+            "doctrine/orm": ">=2.3-dev,<2.5-dev",
+            "doctrine/dbal": ">=2.3-dev,<2.5-dev",
+            "doctrine/migrations": "1.*",
+            "zendframework/zendframework": "2.*"
+        },
+        "require-dev": {
+            "zendframework/zend-developer-tools": "dev-master"
+        },
+        "suggest": {
+            "zendframework/zend-developer-tools": "zend-developer-tools if you want to profile operations executed by the ORM during development"
+        },
+        "time": "2012-12-15 17:29:18",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "0.6.x-dev"
+            }
+        },
+        "installation-source": "dist",
         "autoload": {
             "psr-0": {
                 "DoctrineORMModule\\": "src/",
@@ -610,6 +779,58 @@
             "zf2",
             "module",
             "doctrine"
+        ]
+    },
+    {
+        "name": "zf-commons/zfc-user-doctrine-orm",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "git://github.com/ZF-Commons/ZfcUserDoctrineORM.git",
+            "reference": "37a96fb0f901240bad94afb18530ecf9427ab0df"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://github.com/ZF-Commons/ZfcUserDoctrineORM/archive/37a96fb0f901240bad94afb18530ecf9427ab0df.zip",
+            "reference": "37a96fb0f901240bad94afb18530ecf9427ab0df",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.3",
+            "zf-commons/zfc-base": "dev-master",
+            "zf-commons/zfc-user": "dev-master",
+            "zendframework/zendframework": "2.*",
+            "doctrine/doctrine-orm-module": "0.*"
+        },
+        "time": "2012-11-30 09:18:09",
+        "type": "library",
+        "installation-source": "source",
+        "autoload": {
+            "psr-0": {
+                "ZfcUserDoctrineORM": "src/"
+            },
+            "classmap": [
+                "./"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "authors": [
+            {
+                "name": "Kyle Spraggs",
+                "email": "theman@spiffyjr.me",
+                "homepage": "http://www.spiffyjr.me/"
+            },
+            {
+                "name": "Evan Coury",
+                "email": "me@evancoury.com",
+                "homepage": "http://blog.evan.pro/"
+            }
+        ],
+        "description": "Doctrine2 ORM storage adapter for ZfcUser.",
+        "homepage": "https://github.com/ZF-Commons/ZfcUserDoctrineORM",
+        "keywords": [
+            "zf2"
         ]
     }
 ]

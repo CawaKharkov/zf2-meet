@@ -6,15 +6,19 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
+    'ZfcUserDoctrineORM' => $vendorDir . '/zf-commons/zfc-user-doctrine-orm/src/',
+    'ZfcUser' => $vendorDir . '/zf-commons/zfc-user/src/',
+    'ZfcBase' => $vendorDir . '/zf-commons/zfc-base/src/',
     'Zend\\' => $vendorDir . '/zendframework/zendframework/library/',
     'ZendTest\\' => $vendorDir . '/zendframework/zendframework/tests/',
-    'Symfony\\Component\\Console' => $vendorDir . '/symfony/console/',
-    'Doctrine\\ORM' => $vendorDir . '/doctrine/orm/lib/',
+    'Symfony\\Component\\Console\\' => $vendorDir . '/symfony/console/',
+    'Doctrine\\ORM\\' => $vendorDir . '/doctrine/orm/lib/',
     'Doctrine\\DBAL\\Migrations' => $vendorDir . '/doctrine/migrations/lib',
-    'Doctrine\\DBAL' => $vendorDir . '/doctrine/dbal/lib/',
+    'Doctrine\\DBAL\\' => $vendorDir . '/doctrine/dbal/lib/',
     'Doctrine\\Common\\DataFixtures' => $vendorDir . '/doctrine/data-fixtures/lib/',
-    'Doctrine\\Common' => $vendorDir . '/doctrine/common/lib/',
+    'Doctrine\\Common\\' => $vendorDir . '/doctrine/common/lib/',
     'DoctrineORMModule\\' => $vendorDir . '/doctrine/doctrine-orm-module/src/',
     'DoctrineORMModuleTest\\' => $vendorDir . '/doctrine/doctrine-orm-module/tests/',
     'DoctrineModule\\' => $vendorDir . '/doctrine/doctrine-module/src/',
+    'BjyAuthorize' => $vendorDir . '/bjyoungblood/bjy-authorize/src/',
 );

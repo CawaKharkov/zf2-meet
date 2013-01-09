@@ -150,7 +150,7 @@ class ReferenceRepository
                 $meta->name,
                 $this->identities[$name]
             );
-            $this->references[$name] = $reference; // allready in identity map
+            $this->references[$name] = $reference; // already in identity map
         }
         return $reference;
     }
@@ -168,15 +168,15 @@ class ReferenceRepository
     }
 
     /**
-     * Searches for a reference name in the
+     * Searches for reference names in the
      * list of stored references
      *
      * @param object $reference
-     * @return string
+     * @return array
      */
-    public function getReferenceName($reference)
+    public function getReferenceNames($reference)
     {
-        return array_search($reference, $this->references, true);
+        return array_keys($this->references, $reference, true);
     }
 
     /**
