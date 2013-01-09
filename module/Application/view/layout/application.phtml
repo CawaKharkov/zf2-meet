@@ -10,28 +10,20 @@
 
     </head>
     <body>
+        <!-- Main Menu -->
+        <?php echo $this->partial('/partials/main_menu') ?>
+        <!-- Header -->
+        <header class="row" id="header">
+            <?php echo $this->partial('/partials/slider') ?>
+        </header><!-- END header -->
 
-        <div class="header">
-            <!-- Logo -->
-            <div id="site_title"><a href="index.html">LOGO</a></div>
+        <!-- content -->
+        <?php echo $this->layout()->content ?>
 
-            <!-- Main Menu -->
-            <?php echo $this->partial('/partials/main_menu') ?>
+        <!-- Footer -->
+        <?php echo $this->partial('/partials/footer') ?>
 
-        </div><!-- END header -->
-
-
-        <div id="container" style="min-height: 600px;">
-
-            <?php echo $this->layout()->content ?>
-        </div>
-        <!-- END container -->
-
-
-        <div id="footer">
-
-          <?php echo $this->partial('/partials/footer') ?>
-        </div> <!-- END footer -->
+        <!-- End Footer -->
 
     </body>
 

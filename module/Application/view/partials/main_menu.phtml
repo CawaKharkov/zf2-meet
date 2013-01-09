@@ -1,1 +1,38 @@
-MAIN MENu
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    $("a#buttonForModal").click(function() {
+      $("#myModal").reveal();
+      alert('1');
+    });
+  });
+</script>
+<nav class="top-bar fixed home-border">
+    <ul>
+        <li class="name"><h1><a href="#">Title</a></h1></li>
+        <li class="toggle-topbar"><a href="#"></a></li>
+    </ul>
+    <section>
+        <ul class="left">
+            <li><a href="#">Link</a></li>
+            <li><a href="#">Link</a></li>
+            <li><a href="#">Link</a></li>
+        </ul>
+        <ul class="right">
+            <li><a href="#" data-reveal-id="myModal">Login</a></li>
+            <li class="has-dropdown">
+                <a href="#">Link</a>
+                <ul class="dropdown">
+                    <li><a href="#">Dropdown Link</a></li>
+                    <li><a href="#">Dropdown Link</a></li>
+                    <li><a href="#">Dropdown Link</a></li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+</nav><br><br>
+
+<div id="myModal" class="reveal-modal">
+  <?php echo $this->zfcUserLoginWidget(); ?>
+  <a class="close-reveal-modal">&#215;</a>
+</div>

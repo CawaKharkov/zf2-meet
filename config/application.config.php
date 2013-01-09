@@ -4,13 +4,13 @@ return array(
         'Application',
         'DoctrineModule',
         'DoctrineORMModule',
-        'DataTables',
-        'Test',
-        'Admin',
         'ZfcBase',
         'ZfcUser',
         'ZfcUserDoctrineORM',
         'BjyAuthorize',
+        'DataTables',
+        'Test',
+        'Admin',
 
     ),
     'module_listener_options' => array(

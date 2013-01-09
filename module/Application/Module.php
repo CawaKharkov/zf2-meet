@@ -63,7 +63,8 @@ class Module
                                          ->appendFile('//ajax.googleapis.com/ajax/libs/jqueryui/1.9.0/jquery-ui.min.js')
                                          ->appendFile('/js/app.js')
                                          ->appendFile('/js/modernizr.foundation.js')
-                                         ->appendFile('/js/foundation.min.js');
+                                         ->appendFile('/js/foundation.min.js')
+                                         ->appendFile('/js/main.js');
     }
 
 
