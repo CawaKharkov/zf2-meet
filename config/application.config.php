@@ -1,7 +1,6 @@
 <?php
 return array(
     'modules' => array(
-        'Application',
         'DoctrineModule',
         'DoctrineORMModule',
         'ZfcBase',
@@ -9,6 +8,7 @@ return array(
         'ZfcUserDoctrineORM',
         'BjyAuthorize',
         'DataTables',
+        'Application',
         'Test',
         'Admin',
 

@@ -1,0 +1,21 @@
+/*----------------------------
+	main text animation
+-----------------------------*/
+#text_anim{
+	color: #0063dc;
+	margin:0 auto;
+	min-height: 90px;
+        margin-top: 27%;
+        text-align: center;
+	text-shadow:1px 1px 0 rgba(255,255,255,0.5);
+        font-family: 'Open Sans Condensed',sans-serif;
+        font-size: 36px;
+        opacity:0.4;
+}
+
+#text_anim:hover{
+        text-shadow:40px 40px 0 rgba(255,255,255,0.5);
+        opacity:0.05;
+        transform: scale(2);
+        transition: transform 1s ease;
+}

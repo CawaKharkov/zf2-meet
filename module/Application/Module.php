@@ -57,14 +57,17 @@ class Module
         $helperManager->get('headtitle')->set('test');
 
         $helperManager->get('headlink')->appendStylesheet('/css/foundation.min.css')
-                                       ->appendStylesheet('/css/app.css');
+                                       ->appendStylesheet('/css/app.css')
+                                       ->appendStylesheet('/css/main.css');
 
         $helperManager->get('headscript')->appendFile('//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js')
                                          ->appendFile('//ajax.googleapis.com/ajax/libs/jqueryui/1.9.0/jquery-ui.min.js')
                                          ->appendFile('/js/app.js')
                                          ->appendFile('/js/modernizr.foundation.js')
                                          ->appendFile('/js/foundation.min.js')
-                                         ->appendFile('/js/main.js');
+                                         ->appendFile('/js/main.js')
+                                         ->appendFile('/js/jquery.shuffleLetters.js')                           
+                                         ->appendFile('/js/script.js');
     }
 
 
