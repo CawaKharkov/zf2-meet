@@ -99,7 +99,7 @@ $settings = array(
      * Determines if a captcha should be utilized on the user registration form.
      * Default value is false.
      */
-    //'use_registration_form_captcha' => false,
+    //'use_registration_form_captcha' => true,
 
     /**
      * Form Captcha Options
@@ -143,7 +143,7 @@ $settings = array(
      * Accepted values: A valid route name within your application
      *
      */
-    //'login_redirect_route' => 'zfcuser',
+        'login_redirect_route' => 'application',
 
     /**
      * Logout Redirect Route
@@ -153,7 +153,7 @@ $settings = array(
      * Default value: 'zfcuser/login'
      * Accepted values: A valid route name within your application
      */
-    //'logout_redirect_route' => 'zfcuser/login',
+        'logout_redirect_route' => 'application',
 
     /**
      * Password Security
@@ -180,28 +180,28 @@ $settings = array(
 
     /**
      * Enable user state usage
-     * 
+     *
      * Should user's state be used in the registration/login process?
      */
     //'enable_user_state' => true,
-    
+
     /**
      * Default user state upon registration
-     * 
+     *
      * What state user should have upon registration?
      * Allowed value type: integer
      */
     //'default_user_state' => 1,
-    
+
     /**
      * States which are allowing user to login
-     * 
+     *
      * When user tries to login, is his/her state one of the following?
      * Include null if you want user's with no state to login as well.
      * Allowed value types: null and integer
      */
     //'allowed_login_states' => array( null, 1 ),
-    
+
     /**
      * End of ZfcUser configuration
      */

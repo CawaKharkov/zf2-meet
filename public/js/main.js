@@ -1,19 +1,27 @@
 $(window).load(function() {
     $('#featuredContent').orbit({
-        fluid: '16x6'
+        bulletThumbs:true,
+        fluid: '16x6',
+        bullets:true,
+        directionalNav: true
     });
 });
+
+
 
 $(document).ready(function() {
 
     $('.tabs').foundationTabs();
 
-});
-// text animation for slider
-$(function(){
-	// container is the DOM element;
-	// userText is the textbox
-	var container = $("#text_anim")
+
+
+/*/ text animation for slider
+$('#featuredContent').on('click',"img",function(event){
+    // container is the DOM element;
+    // userText is the textbox
+    alert('1');
+
+/*var container = $("#text_anim")
 		userText = $('#userText');
 	// Shuffle the contents of container
 	container.shuffleLetters();
@@ -37,5 +45,6 @@ $(function(){
 		});
 		userText.val("type anything and hit return..").fadeIn();
 	},5000);
+});*/
 });
 //-------------------------------

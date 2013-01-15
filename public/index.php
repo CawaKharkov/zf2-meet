@@ -11,8 +11,5 @@ require 'init_autoloader.php';
 //erorr reportin on
 ini_set('display_errors', true);
 
-// for zf2DevTools
-define('REQUEST_MICROTIME', microtime(true));
-
 // Run the application!
 Zend\Mvc\Application::init(require 'config/application.config.php')->run();

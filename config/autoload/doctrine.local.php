@@ -21,9 +21,9 @@ return array(
                     'host' => 'localhost',
                     'port' => '3306',
                     //'dsn' => '',
-                    'user' => 'user',
-                    'password' => 'password',
-                    'dbname' => 'dbName',
+                    'user' => 'root',
+                    'password' => 'cawa123azs',
+                    'dbname' => 'cms',
                 )
             )
         )

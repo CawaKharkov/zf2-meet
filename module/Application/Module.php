@@ -27,6 +27,10 @@ class Module
         $eventManager->getSharedManager()->attach(
             'Zend\Mvc\Application', 'render', array($this, 'setLayout')
         );
+        $e->getApplication()->getServiceManager()->get('viewhelpermanager')->setFactory('controllerName', function($sm) use ($e) {
+        $viewHelper = new View\Helper\ControllerName($e->getRouteMatch());
+        return $viewHelper;
+        });
     }
 
     public function getConfig()
@@ -66,8 +70,7 @@ class Module
                                          ->appendFile('/js/modernizr.foundation.js')
                                          ->appendFile('/js/foundation.min.js')
                                          ->appendFile('/js/main.js')
-                                         ->appendFile('/js/jquery.shuffleLetters.js')                           
-                                         ->appendFile('/js/script.js');
+                                         ->appendFile('/js/jquery.shuffleLetters.js');
     }
 
 

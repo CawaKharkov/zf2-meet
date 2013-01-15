@@ -1,17 +1,17 @@
+<?php $crumbs = explode("\\", $this->controllerName()) ?>
 <footer class="row">
     <div class="twelve columns"><hr />
         <div class="row">
 
             <div class="six columns">
-                <p>&copy; Copyright no one at all. Go to town.</p>
+                <p>&copy; Copyright no one at all. Go to town. Made by <span class="success radius label tiny">cawa</span>, powered by <span class="success radius label tiny">ZF2 Ver. <?php echo \Zend\Version\Version::VERSION ?></span></p>
             </div>
 
             <div class="six columns">
                 <ul class="breadcrumbs">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Features</a></li>
-                    <li class="unavailable"><a href="#">Gene Splicing</a></li>
-                    <li class="current"><a href="#">Home</a></li>
+                    <?php foreach ($crumbs as $crumb): ?>
+                        <li><a href="<?php  echo $this->url('application')?>"><?php echo $crumb; ?></a></li>
+                    <?php endforeach; ?>
                 </ul>
             </div>
 

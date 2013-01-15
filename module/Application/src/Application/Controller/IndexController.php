@@ -15,13 +15,11 @@ use Zend\View\Model\ViewModel;
 class IndexController extends AbstractController
 {
 
-    public function __construct()
-    {
-        //$this->setAcl();
-    }
 
     public function indexAction()
     {
+
+        //var_dump(get_class_methods($this->zfcUserAuthentication()));
         return new ViewModel();
     }
 }
