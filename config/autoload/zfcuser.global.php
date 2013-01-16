@@ -21,7 +21,7 @@ $settings = array(
      * instead of the default one provided. Default is ZfcUser\Entity\User.
      * The entity class should implement ZfcUser\Entity\UserInterface
      */
-    //'user_entity_class' => 'ZfcUser\Entity\User',
+        'user_entity_class' => 'Application\Entity\UserNew',
 
     /**
      * Enable registration
@@ -30,7 +30,7 @@ $settings = array(
      *
      * Accepted values: boolean true or false
      */
-    //'enable_registration' => true,
+        'enable_registration' => true,
 
     /**
      * Enable Username
@@ -143,7 +143,7 @@ $settings = array(
      * Accepted values: A valid route name within your application
      *
      */
-        'login_redirect_route' => 'application',
+      //  'login_redirect_route' => 'application',
 
     /**
      * Logout Redirect Route
@@ -153,7 +153,7 @@ $settings = array(
      * Default value: 'zfcuser/login'
      * Accepted values: A valid route name within your application
      */
-        'logout_redirect_route' => 'application',
+     //   'logout_redirect_route' => 'application',
 
     /**
      * Password Security

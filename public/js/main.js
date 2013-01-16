@@ -1,7 +1,7 @@
 $(window).load(function() {
     $('#featuredContent').orbit({
         bulletThumbs:true,
-        fluid: '16x6',
+        fluid: '12x3',
         bullets:true,
         directionalNav: true
     });

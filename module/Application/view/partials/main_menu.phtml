@@ -6,17 +6,20 @@
         });
 
 
-    $('a.reveal').on('click',function(event) {
-        event.preventDefault();
-       var $div = $('<div[class="registerModal"]>').addClass('reveal-modal').appendTo('body'),
-        $this = $(this);
-        $.get($this.attr('href'), function(data) {
-            return $div.empty().html(data).append('<a class="close-reveal-modal">&#215;</a>').reveal();
+        $('a.reveal').click(function(event) {
+            event.preventDefault();
+            var $div = $('#registerModal').addClass('reveal-modal').appendTo('body'),
+            $this = $(this);
+            //$div.empty().html('<div>').append('×').reveal();
+
+            $.get($this.attr('href'), function(data) {
+               // alert($div.toSource());
+                    return $div.empty().html(data);//.append('<a class="close-reveal-modal">&#215;</a>').reveal();
+            });
+
         });
 
     });
-
-       });
 </script>
 <nav class="top-bar fixed home-border">
     <ul>
@@ -26,7 +29,7 @@
     <section>
         <ul class="left">
             <li><a href="<?php echo $this->url('application/default', ['controller' => 'user']) ?>">Profiles</a></li>
-            <li><a class="reveal" href="<?php echo $this->url('application/default', ['controller' => 'user', 'action' => 'register']) ?>" data-reveal-id="registerModal" >Register</a></li>
+            <li><a class="reveal" href="<?php echo $this->url('application/default', ['controller' => 'user', 'action' => 'new']) ?>" data-reveal-id="registerModal" >Register</a></li>
             <li><a href="<?php echo $this->url('application/default', ['controller' => 'news']) ?>">News</a></li>
         </ul>
         <ul class="right">
@@ -69,7 +72,6 @@
     </form>
 </div>
 
-<div id="registerModal" class="reveal-modal" style="border: 1px solid black">
+<div id="registerModal"style="border: 1px solid black;display: none">
 
-    <a class="close-reveal-modal">&#215;</a>
 </div>

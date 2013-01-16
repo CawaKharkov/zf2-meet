@@ -53,7 +53,7 @@ return array(
     'service_manager' => array(
         'factories' => array(
             'translator' => 'Zend\I18n\Translator\TranslatorServiceFactory',
-              'navigation' => 'Zend\Navigation\Service\DefaultNavigationFactory',
+            'navigation' => 'Zend\Navigation\Service\DefaultNavigationFactory',
         ),
     ),
     'translator' => array(
@@ -88,4 +88,25 @@ return array(
             __DIR__ . '/../view',
         ),
     ),
+    'doctrine' => array(
+        'driver' => array(
+            // defines an annotation driver with to paths, and names it `my_annotation_driver`
+            'my_annotation_driver' => array(
+                'class' => 'Doctrine\ORM\Mapping\Driver\XmlDriver',
+                'cache' => 'array',
+                'paths' => array(
+                    'Application/Entity',
+                    'module/Application/config/xml',
+                ),
+            ),
+            // default metadata driver, aggregates all other drivers into a single one.
+            // Override `orm_default` only if you know what you're doing
+            'orm_default' => array(
+                'drivers' => array(
+                    // register `my_annotation_driver` for any entity under namespace `My\Namespace`
+                    'Application' => 'my_annotation_driver'
+                )
+            )
+        )
+    )
 );

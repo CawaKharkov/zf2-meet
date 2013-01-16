@@ -32,6 +32,9 @@ class UserController extends AbstractController
         //$em = $this->getEntityManager();
         //var_dump(get_class_methods($em));
         //var_dump($em->getConnection());
+        $i = $this->zfcUserAuthentication()->getIdentity();
+        var_dump($i);
+        die('1');
         $viewModel = new ViewModel;
         $repository = $this->getEntityManager()->getRepository('\ZfcUser\Entity\User');
         $users   = $repository->findAll();
@@ -48,6 +51,20 @@ class UserController extends AbstractController
         $user = $repository->findBy(['email'=>$email]);
         $viewModel = new ViewModel();
         $viewModel->user = $user[0];
+        return $viewModel;
+    }
+
+
+    public function newAction()
+    {
+        $xhr = $this->request->isXmlHttpRequest();
+        $viewModel = new ViewModel();
+        $viewModel->setTerminal($xhr);
+        $i = $this->zfcUserAuthentication()->getIdentity();
+
+        //var_dump($i);
+        $viewModel->registerForm = new \Application\Form\Register();
+        $viewModel->setTemplate('zfc-user/user/register.phtml');
         return $viewModel;
     }
 }
