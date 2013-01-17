@@ -40,7 +40,7 @@ $settings = array(
      *
      * Accepted values: boolean true or false
      */
-    //'enable_username' => false,
+        'enable_username' => false,
 
     /**
      * Enable Display Name
@@ -50,7 +50,7 @@ $settings = array(
      *
      * Accepted values: boolean true or false
      */
-    //'enable_display_name' => true,
+        'enable_display_name' => false,
 
     /**
      * Modes for authentication identity match
@@ -143,7 +143,7 @@ $settings = array(
      * Accepted values: A valid route name within your application
      *
      */
-      //  'login_redirect_route' => 'application',
+        'login_redirect_route' => 'application',
 
     /**
      * Logout Redirect Route
@@ -153,7 +153,7 @@ $settings = array(
      * Default value: 'zfcuser/login'
      * Accepted values: A valid route name within your application
      */
-     //   'logout_redirect_route' => 'application',
+        'logout_redirect_route' => 'application',
 
     /**
      * Password Security

@@ -92,11 +92,10 @@ return array(
         'driver' => array(
             // defines an annotation driver with to paths, and names it `my_annotation_driver`
             'my_annotation_driver' => array(
-                'class' => 'Doctrine\ORM\Mapping\Driver\XmlDriver',
+                'class' => 'Doctrine\ORM\Mapping\Driver\AnnotationDriver',
                 'cache' => 'array',
                 'paths' => array(
                     'Application/Entity',
-                    'module/Application/config/xml',
                 ),
             ),
             // default metadata driver, aggregates all other drivers into a single one.

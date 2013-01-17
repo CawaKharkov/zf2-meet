@@ -1,15 +1,16 @@
-
+<div class="row">
 <?php foreach ($this->users as $user): ?>
-    <div class="three columns">
+    <div class="three">
         <div  class="panel">
             <a href="<?php echo $this->url('application/default',
                                             ['controller' => 'user',
                                                 'action' => 'info'])
                     . '?email=' . $user->getemail() ?>">
                 <img src="http://placehold.it/100x100&text=User photo"></a>
-            <h6 class="right">Name: <?php echo $user->getusername() ?> <br> Display name:<?php echo $user->getdisplayname() ?></h6>
-
+            <h6 class="right">Name: <?php echo $user->getrealname() ?> <br> Country:<?php echo $user->getCountry() ?></h6>
+            <br>Birth:  <?php echo ($user->getBirth()->format('Y-m-d')) ?>
             <p>User email:<?php echo $user->getemail() ?></p>
         </div>
     </div>
 <?php endforeach; ?>
+</div>

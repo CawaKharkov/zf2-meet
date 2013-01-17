@@ -27,16 +27,8 @@ class UserController extends AbstractController
 
     public function indexAction()
     {
-        //var_dump(get_class_methods($this->zfcUserAuthentication()));
-        //$this->getServiceLocator()->get('user');
-        //$em = $this->getEntityManager();
-        //var_dump(get_class_methods($em));
-        //var_dump($em->getConnection());
-        $i = $this->zfcUserAuthentication()->getIdentity();
-        var_dump($i);
-        die('1');
         $viewModel = new ViewModel;
-        $repository = $this->getEntityManager()->getRepository('\ZfcUser\Entity\User');
+        $repository = $this->getEntityManager()->getRepository('\Application\Entity\UserNew');
         $users   = $repository->findAll();
         //var_dump($users);
         $viewModel->users = $users;
@@ -60,10 +52,12 @@ class UserController extends AbstractController
         $xhr = $this->request->isXmlHttpRequest();
         $viewModel = new ViewModel();
         $viewModel->setTerminal($xhr);
-        $i = $this->zfcUserAuthentication()->getIdentity();
+
 
         //var_dump($i);
-        $viewModel->registerForm = new \Application\Form\Register();
+        $viewModel->registerForm = $this->getServiceLocator()->get('zfcuser_register_form');
+        $viewModel->user = $this->zfcUserAuthentication()->getIdentity();
+        //var_dump($this->getServiceLocator()->get('zfcuser_module_options'));
         $viewModel->setTemplate('zfc-user/user/register.phtml');
         return $viewModel;
     }

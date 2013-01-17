@@ -1,56 +1,73 @@
 <?php
 
 namespace Application\Entity;
+
 use ZfcUser\Entity\UserInterface;
-use ZfcUser\Entity\User;
+use Doctrine\ORM\Mapping as ORM;
 
+/**
+ *
+ * @ORM\Entity
+ * @ORM\Table(name="user")
+ * /
+ */
+class UserNew implements UserInterface {
 
-class UserNew implements UserInterface
-//extends User
-{
     /**
-     * @var int
+     * @ORM\Id
+     * @ORM\Column(type="integer",name="user_id");
+     * @ORM\GeneratedValue(strategy="AUTO")
      */
     protected $id;
 
     /**
+     *
+     * @ORM\Column(type="string",name="real_name")
      * @var string
+     * @access protected
      */
-    protected $username;
+    protected $real_name;
 
     /**
+     *
+     * @ORM\Column(type="string",name="email")
      * @var string
+     * @access protected
      */
     protected $email;
 
     /**
+     *
+     * @ORM\Column(type="datetime",name="birth")
      * @var string
+     * @access protected
      */
-    protected $displayName;
+    protected $birth;
 
     /**
+     *
+     * @ORM\Column(type="string",name="country")
      * @var string
+     * @access protected
+     */
+    protected $country;
+
+    /**
+     *
+     * @ORM\Column(type="string",name="password")
+     * @var string
+     * @access protected
      */
     protected $password;
 
-    /**
-     * @var int
-     */
-    protected $state;
 
-
-    /*
-     * @var int
-     */
-    protected $role;
 
     /**
      * Get id.
      *
      * @return int
      */
-    public function getId()
-    {
+    public function getId() {
         return $this->id;
     }
 
@@ -60,31 +77,8 @@ class UserNew implements UserInterface
      * @param int $id
      * @return UserInterface
      */
-    public function setId($id)
-    {
+    public function setId($id) {
         $this->id = (int) $id;
-        return $this;
-    }
-
-    /**
-     * Get username.
-     *
-     * @return string
-     */
-    public function getUsername()
-    {
-        return $this->username;
-    }
-
-    /**
-     * Set username.
-     *
-     * @param string $username
-     * @return UserInterface
-     */
-    public function setUsername($username)
-    {
-        $this->username = $username;
         return $this;
     }
 
@@ -93,8 +87,7 @@ class UserNew implements UserInterface
      *
      * @return string
      */
-    public function getEmail()
-    {
+    public function getEmail() {
         return $this->email;
     }
 
@@ -104,31 +97,53 @@ class UserNew implements UserInterface
      * @param string $email
      * @return UserInterface
      */
-    public function setEmail($email)
-    {
+    public function setEmail($email) {
         $this->email = $email;
         return $this;
     }
 
     /**
-     * Get displayName.
+     * Get email.
      *
      * @return string
      */
-    public function getDisplayName()
+    public function getRealname()
     {
-        return $this->displayName;
+        return $this->real_name;
     }
 
     /**
-     * Set displayName.
+     * Set real_name
      *
-     * @param string $displayName
+     * @param string $real_name
      * @return UserInterface
      */
-    public function setDisplayName($displayName)
+    public function setRealname($real_name)
     {
-        $this->displayName = $displayName;
+        $this->real_name = $real_name;
+        return $this;
+    }
+
+    public function getBirth()
+    {
+        return $this->birth;
+    }
+
+    public function setBirth($date)
+    {
+        $dateS = new \DateTime($date);
+        $this->birth = $dateS;
+        return $this;
+    }
+
+    public function getCountry()
+    {
+        return $this->country;
+    }
+
+    public function setCountry($country)
+    {
+        $this->country = $country;
         return $this;
     }
 
@@ -137,8 +152,7 @@ class UserNew implements UserInterface
      *
      * @return string
      */
-    public function getPassword()
-    {
+    public function getPassword() {
         return $this->password;
     }
 
@@ -148,41 +162,35 @@ class UserNew implements UserInterface
      * @param string $password
      * @return UserInterface
      */
-    public function setPassword($password)
-    {
+    public function setPassword($password) {
         $this->password = $password;
         return $this;
     }
 
-    /**
-     * Get state.
-     *
-     * @return int
-     */
-    public function getState()
-    {
-        return $this->state;
+//----------------------------------------------interface
+    public function getState() {
+        //return $this->state;
     }
 
-    /**
-     * Set state.
-     *
-     * @param int $state
-     * @return UserInterface
-     */
-    public function setState($state)
-    {
-        $this->state = $state;
-        return $this;
+    public function setState($state) {
+        //$this->state = $state;
+        //return $this;
     }
 
-     /**
-     * Get state.
-     *
-     * @return int
-     */
-    public function getRole()
-    {
-        return $this->role;
+    public function getUsername() {
+        //return $this->username;
     }
+    public function setUsername($username) {
+        //$this->username = $username;
+        //return $this;
+    }
+    public function getDisplayName() {
+        //return $this->displayName;
+    }
+
+    public function setDisplayName($displayName) {
+        //$this->displayName = $displayName;
+        //return $this;
+    }
+
 }

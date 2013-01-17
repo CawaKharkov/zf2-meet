@@ -1,26 +1,3 @@
-<script type="text/javascript">
-    $(document).ready(function() {
-        $("a#buttonForModal").click(function() {
-            $("#myModal").reveal();
-            alert('1');
-        });
-
-
-        $('a.reveal').click(function(event) {
-            event.preventDefault();
-            var $div = $('#registerModal').addClass('reveal-modal').appendTo('body'),
-            $this = $(this);
-            //$div.empty().html('<div>').append('×').reveal();
-
-            $.get($this.attr('href'), function(data) {
-               // alert($div.toSource());
-                    return $div.empty().html(data);//.append('<a class="close-reveal-modal">&#215;</a>').reveal();
-            });
-
-        });
-
-    });
-</script>
 <nav class="top-bar fixed home-border">
     <ul>
         <li class="name"><h1><a href="<?php echo $this->url('application', []) ?>">Paradebrides</a></h1></li>
@@ -72,6 +49,5 @@
     </form>
 </div>
 
-<div id="registerModal"style="border: 1px solid black;display: none">
-
+<div id="registerModal" style="border: 1px solid black;display: none;" class="row">
 </div>
