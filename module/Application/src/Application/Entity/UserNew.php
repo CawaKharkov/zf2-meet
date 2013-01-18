@@ -61,7 +61,6 @@ class UserNew implements UserInterface {
     protected $password;
 
 
-
     /**
      * Get id.
      *

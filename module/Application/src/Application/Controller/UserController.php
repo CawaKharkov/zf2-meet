@@ -28,11 +28,31 @@ class UserController extends AbstractController
     public function indexAction()
     {
         $viewModel = new ViewModel;
-        $repository = $this->getEntityManager()->getRepository('\Application\Entity\UserNew');
-        $users   = $repository->findAll();
-        //var_dump($users);
-        $viewModel->users = $users;
-        return $viewModel;
+        //$repository = $this->getEntityManager()->getRepository('\Application\Entity\User');
+        //$repositoryG = $this->getEntityManager()->getRepository('\Application\Entity\GrpNew');
+        //$users   = $repository->findAll();
+        $em = $this->getEntityManager();
+        //$gr = $em->getRepository('\Application\Entity\GrpNew')->findOneBy(['group_name'=>'GROUP']);
+        $user = $em->find('\Application\Entity\User',2);
+
+        echo $user->getName().PHP_EOL;
+        $gr = $user->getGroup();
+        var_dump($user);
+        var_dump($gr->getGroupName());
+        //$user = $em->find('\Application\Entity\User','1');
+        /*$gr = new \Application\Entity\GrpNew();
+        $gr->setGroupName('GROUP');
+        $user = new \Application\Entity\User();
+        $user->setGropu($gr);
+        $user->setName('TEST');
+        $em->persist($user);
+        $em->flush();*/
+        //$group = $repositoryG->findAll();
+
+        //var_dump($group);
+        //$viewModel->users = $users;
+        //return $viewModel;
+        die('end');
     }
 
     public function infoAction()
