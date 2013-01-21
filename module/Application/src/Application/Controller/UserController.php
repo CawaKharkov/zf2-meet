@@ -52,7 +52,7 @@ class UserController extends AbstractController
         //var_dump($group);
         //$viewModel->users = $users;
         //return $viewModel;
-        die('end');
+       // die('end');
     }
 
     public function infoAction()

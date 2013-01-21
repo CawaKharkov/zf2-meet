@@ -1,5 +1,5 @@
 {
-    "hash": "e5cc12a48e6ed0a345e13ade34a4d4ac",
+    "hash": "88ceff98727e552a985951ecd0ec6143",
     "packages": [
         {
             "name": "bjyoungblood/bjy-authorize",
@@ -7,12 +7,12 @@
             "source": {
                 "type": "git",
                 "url": "git://github.com/bjyoungblood/BjyAuthorize.git",
-                "reference": "release-1.1"
+                "reference": "5c1914322100a82c5ad69580e017de1085184035"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/bjyoungblood/BjyAuthorize/archive/release-1.1.zip",
-                "reference": "release-1.1",
+                "url": "https://github.com/bjyoungblood/BjyAuthorize/archive/5c1914322100a82c5ad69580e017de1085184035.zip",
+                "reference": "5c1914322100a82c5ad69580e017de1085184035",
                 "shasum": ""
             },
             "require": {
@@ -27,7 +27,7 @@
             "suggest": {
                 "zf-commons/zfc-user-doctrine-orm": "dev-master"
             },
-            "time": "2013-01-10 17:39:28",
+            "time": "2013-01-16 20:01:22",
             "type": "library",
             "autoload": {
                 "psr-0": {
@@ -391,12 +391,12 @@
             "source": {
                 "type": "git",
                 "url": "git://github.com/doctrine/DoctrineModule.git",
-                "reference": "5caf44108da5ee7316804698a9edd245d16e8aa6"
+                "reference": "31d75b3af6a9fbb1ba0cad3d8023d030f78c33c8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/doctrine/DoctrineModule/archive/5caf44108da5ee7316804698a9edd245d16e8aa6.zip",
-                "reference": "5caf44108da5ee7316804698a9edd245d16e8aa6",
+                "url": "https://github.com/doctrine/DoctrineModule/archive/31d75b3af6a9fbb1ba0cad3d8023d030f78c33c8.zip",
+                "reference": "31d75b3af6a9fbb1ba0cad3d8023d030f78c33c8",
                 "shasum": ""
             },
             "require": {
@@ -414,7 +414,7 @@
             "suggest": {
                 "doctrine/data-fixtures": "Data Fixtures if you want to generate test data or bootstrap data for your deployments"
             },
-            "time": "2013-01-15 08:53:59",
+            "time": "2013-01-17 13:35:41",
             "bin": [
                 "bin/doctrine-module"
             ],
@@ -832,6 +832,41 @@
             "homepage": "http://symfony.com"
         },
         {
+            "name": "zendframework/zend-version",
+            "version": "2.0.6",
+            "target-dir": "Zend/Version",
+            "dist": {
+                "type": "zip",
+                "url": "http://packages.zendframework.com/composer/Zend_Version-2.0.6.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Zend\\Version\\": ""
+                }
+            },
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "description": " ",
+            "homepage": "http://packages.zendframework.com/",
+            "keywords": [
+                "zf2",
+                "version"
+            ],
+            "support": {
+                "email": "fw-general-subscribe@lists.zend.com",
+                "irc": "irc://irc.freenode.net/zftalk",
+                "issues": "https://github.com/zendframework/zf2/issues",
+                "source": "https://github.com/zendframework/zf2"
+            }
+        },
+        {
             "name": "zendframework/zendframework",
             "version": "2.0.6",
             "source": {
@@ -935,6 +970,48 @@
                 "framework",
                 "zf2"
             ]
+        },
+        {
+            "name": "zendframework/zendservice-recaptcha",
+            "version": "2.0.1",
+            "dist": {
+                "type": "zip",
+                "url": "http://packages.zendframework.com/composer/ZendService_ReCaptcha-2.0.1.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "php": ">=5.3.3",
+                "zendframework/zend-http": ">=2.0.0",
+                "zendframework/zend-uri": ">=2.0.0",
+                "zendframework/zend-version": ">=2.0.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "ZendService": "library/"
+                }
+            },
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "description": "OOP wrapper for the ReCaptcha web service",
+            "homepage": "http://packages.zendframework.com/",
+            "keywords": [
+                "zf2",
+                "recaptcha"
+            ],
+            "support": {
+                "email": "fw-general-subscribe@lists.zend.com",
+                "irc": "irc://irc.freenode.net/zftalk",
+                "issues": "https://github.com/zendframework/zf2/issues",
+                "source": "https://github.com/zendframework/zf2"
+            }
         },
         {
             "name": "zf-commons/zfc-base",

@@ -13,19 +13,22 @@ $(document).ready(function() {
 
     $('.tabs').foundationTabs();
 
-    $('a.reveal').click(function(event) {
-            event.preventDefault();
-            var $div = $('#registerModal').addClass('reveal-modal').appendTo('body'),
-            $this = $(this);
-
-            //$div.empty().html('').append('×').reveal();
-
-            $.get($this.attr('href'), function(data) {
-               // alert($div.toSource());
-                    return $div.empty().html(data);//.append('<a class="close-reveal-modal">&#215;</a>').reveal();
-            });
-
+    $('#menu-register').click(function(event) {
+        event.preventDefault();
+        var $div = $('#registerModal').addClass('reveal-modal').appendTo('body'),
+        $this = $(this);
+        //$div.empty().html('').append('×').reveal();
+        $.get($this.attr('href'), function(data) {
+            // alert($div.toSource());
+            return $div.empty().html(data).append('<a class="close-reveal-modal">&#215;</a>').reveal();
         });
+
+    });
+
+    $('#menu-login').click(function(){
+        $('#loginModal').reveal();
+        return false;
+    });
 
 /*/ text animation for slider
 $('#featuredContent').on('click',"img",function(event){

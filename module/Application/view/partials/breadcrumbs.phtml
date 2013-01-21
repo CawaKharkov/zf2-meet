@@ -1,5 +1,8 @@
+<?php
+var_dump($this->pages);die();
+?>
 <ul class="breadcrumb">
-    <?php foreach($this->pages as $page) : ?>
+    <?php foreach($this->conatainer as $page) : ?>
     <li<?php echo $page->isActive() ? ' class="active"' : '' ?>>
     <?php if (!$page->isActive()) : ?>
         <a href="<?php echo $this->url($page->route) ?>"><?php echo $page->label ?></a>

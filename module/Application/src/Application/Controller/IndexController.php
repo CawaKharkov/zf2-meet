@@ -18,7 +18,10 @@ class IndexController extends AbstractController
 
     public function indexAction()
     {
-
+        /*$pubKey= '6Lfx2NsSAAAAAF1_MOV93YpJhIB2UW4hpq0lvfjX';
+        $privKey= '6Lfx2NsSAAAAAA2mbAVw5fW94Nwoar78UjW3DswD';
+        $recaptcha = new \ZendService\ReCaptcha\ReCaptcha($pubKey, $privKey);
+        echo $recaptcha->getHTML();die();*/
         //var_dump(get_class_methods($this->zfcUserAuthentication()));
         return new ViewModel();
     }

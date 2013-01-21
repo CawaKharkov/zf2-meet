@@ -1,0 +1,48 @@
+<?php
+$output = '<nav class="top-bar fixed home-border">';
+$output .= '<ul class="left">';
+foreach ($this->container as $page) {
+
+    if ($page->class == 'right') {
+        $output .= '</li></ul>';
+        $output .= '<section><ul class="right">';
+        foreach ($page as $p) {
+            $output .='<li>';
+            $output .= $this->navigation()->menu()->htmlify($p) . PHP_EOL;
+            $output .='</li>';
+        }
+        $output .='</ul>';
+        $output .='</section>';
+    }
+    $output .= '<li>';
+    $output .= $this->navigation()->menu()->htmlify($page) . PHP_EOL;
+    $output .='</li>';
+}
+$output .= '</ul></nav>';
+echo $output;
+?>
+<div id="loginModal" class="reveal-modal" style="border: 1px solid black">
+    <!-- Test if the User is connected -->
+    <?php if (!$this->zfcUserIdentity()): ?>
+        <?php echo $this->zfcUserLoginWidget(); ?>
+    <?php else: ?>
+        <div style="float:left; padding-right:16px;"><?php echo $this->gravatar($this->zfcUserIdentity()->getEmail()) ?></div>
+        <h3>Hello, <?php echo $this->zfcUserDisplayName() ?>!</h3>
+        <a href="<?php echo $this->url('zfcuser/logout') ?>">[Sign Out]</a>
+        <div style="clear:both;"></div>
+
+    <?php endif; ?>
+    <a class="close-reveal-modal">&#215;</a>
+</div>
+
+<div id="searchModal" class="reveal-modal" style="border: 1px solid black">
+    <a class="close-reveal-modal">&#215;</a>
+    <form method="POST" action="#">
+        <label>Search</label>
+        <input type="text"/>
+        <input type="submit" value="Search" class="small radius button"/>
+    </form>
+</div>
+
+<div id="registerModal" style="border: 1px solid black;display: none;" class="row">
+</div>

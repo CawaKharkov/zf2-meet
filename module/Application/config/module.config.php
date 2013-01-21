@@ -56,6 +56,44 @@ return array(
             'navigation' => 'Zend\Navigation\Service\DefaultNavigationFactory',
         ),
     ),
+    'navigation' => [
+        'default' => [
+            'home' => [
+                'label' => 'ParadeBrides',
+                'route' => 'application',
+                'class' => 'name',
+            ],
+            'profile' => [
+                'label' => 'Profiles',
+                'route' => 'application/default',
+                'controller' => 'user'
+            ],
+            'register' => [
+                'label' => 'Register',
+                'route' => 'application/default',
+                'controller' => 'user',
+                'id' => 'register',
+                'action' => 'new'
+            ],
+            'news' => [
+                'label' => 'News',
+                'route' => 'application/default',
+                'controller' => 'news',
+            ],
+            'user' => [
+                'label' => 'User',
+                'route' => 'application/default',
+                'class' => 'right',
+                'pages' =>[
+                        'login' => [
+                            'label' => 'Login',
+                            'route' => 'zfcuser/login',
+                            'id' => 'login'
+                        ]
+                ]
+            ]
+        ]
+    ],
     'translator' => array(
         'locale' => 'en_US',
         'translation_file_patterns' => array(
