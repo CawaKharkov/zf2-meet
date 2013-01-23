@@ -12,7 +12,7 @@ $(window).load(function() {
 $(document).ready(function() {
 
     $('.tabs').foundationTabs();
-
+    $(document).foundationTooltips();
     $('#menu-register').click(function(event) {
         event.preventDefault();
         var $div = $('#registerModal').addClass('reveal-modal').appendTo('body'),

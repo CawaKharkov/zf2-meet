@@ -1,5 +1,5 @@
 {
-    "hash": "88ceff98727e552a985951ecd0ec6143",
+    "hash": "e5cc12a48e6ed0a345e13ade34a4d4ac",
     "packages": [
         {
             "name": "bjyoungblood/bjy-authorize",
@@ -832,41 +832,6 @@
             "homepage": "http://symfony.com"
         },
         {
-            "name": "zendframework/zend-version",
-            "version": "2.0.6",
-            "target-dir": "Zend/Version",
-            "dist": {
-                "type": "zip",
-                "url": "http://packages.zendframework.com/composer/Zend_Version-2.0.6.zip",
-                "reference": null,
-                "shasum": null
-            },
-            "require": {
-                "php": ">=5.3.3"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "Zend\\Version\\": ""
-                }
-            },
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "description": " ",
-            "homepage": "http://packages.zendframework.com/",
-            "keywords": [
-                "zf2",
-                "version"
-            ],
-            "support": {
-                "email": "fw-general-subscribe@lists.zend.com",
-                "irc": "irc://irc.freenode.net/zftalk",
-                "issues": "https://github.com/zendframework/zf2/issues",
-                "source": "https://github.com/zendframework/zf2"
-            }
-        },
-        {
             "name": "zendframework/zendframework",
             "version": "2.0.6",
             "source": {
@@ -970,48 +935,6 @@
                 "framework",
                 "zf2"
             ]
-        },
-        {
-            "name": "zendframework/zendservice-recaptcha",
-            "version": "2.0.1",
-            "dist": {
-                "type": "zip",
-                "url": "http://packages.zendframework.com/composer/ZendService_ReCaptcha-2.0.1.zip",
-                "reference": null,
-                "shasum": null
-            },
-            "require": {
-                "php": ">=5.3.3",
-                "zendframework/zend-http": ">=2.0.0",
-                "zendframework/zend-uri": ">=2.0.0",
-                "zendframework/zend-version": ">=2.0.0"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-0": {
-                    "ZendService": "library/"
-                }
-            },
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "description": "OOP wrapper for the ReCaptcha web service",
-            "homepage": "http://packages.zendframework.com/",
-            "keywords": [
-                "zf2",
-                "recaptcha"
-            ],
-            "support": {
-                "email": "fw-general-subscribe@lists.zend.com",
-                "irc": "irc://irc.freenode.net/zftalk",
-                "issues": "https://github.com/zendframework/zf2/issues",
-                "source": "https://github.com/zendframework/zf2"
-            }
         },
         {
             "name": "zf-commons/zfc-base",

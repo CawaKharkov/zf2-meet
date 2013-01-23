@@ -9,13 +9,14 @@
         <?php echo $this->headScript() . PHP_EOL ?>
      <script>
          $(document).ready(function() {
-           
+
 
 
          });
      </script>
     </head>
     <body>
+        <?php var_dump($this->var) ?>
         <!-- Main Menu -->
         <?php //echo $this->partial('/partials/main_menu')
                 $this->navigation('Navigation')->menu()->setPartial('partials/nav.phtml');

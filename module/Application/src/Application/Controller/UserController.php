@@ -28,17 +28,21 @@ class UserController extends AbstractController
     public function indexAction()
     {
         $viewModel = new ViewModel;
+
+        $em = $this->getEntityManager();
         //$repository = $this->getEntityManager()->getRepository('\Application\Entity\User');
         //$repositoryG = $this->getEntityManager()->getRepository('\Application\Entity\GrpNew');
         //$users   = $repository->findAll();
-        $em = $this->getEntityManager();
-        //$gr = $em->getRepository('\Application\Entity\GrpNew')->findOneBy(['group_name'=>'GROUP']);
-        $user = $em->find('\Application\Entity\User',2);
 
-        echo $user->getName().PHP_EOL;
-        $gr = $user->getGroup();
-        var_dump($user);
-        var_dump($gr->getGroupName());
+        //$gr = $em->getRepository('\Application\Entity\GrpNew')->findOneBy(['group_name'=>'GROUP']);
+        $user = $this->zfcUserAuthentication()->getIdentity();
+        var_dump($this->isAllowed('Application\Controller\User','admin'));// echo '1';
+        //echo $user->getRealName().PHP_EOL;
+        //$gr = $user->getGroup();
+        //var_dump($user->getGroup()->getGroupName());
+
+
+        //var_dump($gr->getGroupName());
         //$user = $em->find('\Application\Entity\User','1');
         /*$gr = new \Application\Entity\GrpNew();
         $gr->setGroupName('GROUP');
@@ -52,7 +56,7 @@ class UserController extends AbstractController
         //var_dump($group);
         //$viewModel->users = $users;
         //return $viewModel;
-       // die('end');
+        //die('end');
     }
 
     public function infoAction()

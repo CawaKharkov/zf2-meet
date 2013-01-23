@@ -62,6 +62,12 @@ class UserNew implements UserInterface {
 
 
     /**
+     * @ORM\OneToOne(targetEntity="GrpNew")
+     * @ORM\JoinColumn(name="group_id", referencedColumnName="id")
+     */
+    protected $group;
+
+    /**
      * Get id.
      *
      * @return int
@@ -106,7 +112,7 @@ class UserNew implements UserInterface {
      *
      * @return string
      */
-    public function getRealname()
+    public function getRealName()
     {
         return $this->real_name;
     }
@@ -164,6 +170,11 @@ class UserNew implements UserInterface {
     public function setPassword($password) {
         $this->password = $password;
         return $this;
+    }
+
+    public function getGroup()
+    {
+        return $this->group;
     }
 
 //----------------------------------------------interface
