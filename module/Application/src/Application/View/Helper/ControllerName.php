@@ -16,6 +16,10 @@ protected $routeMatch;
     public function __invoke()
     {
         $controller = $this->routeMatch->getParam('controller');
-        return $controller;
+        $controllerName = array_pop(explode('\\',$controller));
+        if($controllerName === 'Index'){
+            $controllerName = 'Home';
+        }
+        return $controllerName;
     }
 }

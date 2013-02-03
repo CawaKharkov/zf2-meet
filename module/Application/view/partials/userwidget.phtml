@@ -1,0 +1,22 @@
+<section class="right two">
+
+    <a href="#" id="menu-login">
+        <span class="has-tip tip-bottom" style="border-bottom: none;" title="Info"><i class="foundicon-address-book"></i></span></a>&nbsp;&nbsp;&nbsp;
+    <span class="has-tip tip-bottom" style="border-bottom: none;" title="Messages"><i class="foundicon-mail"></i></span>&nbsp;&nbsp;&nbsp;
+    <a href="<?php echo $this->url('application/default', ['controller' => 'user', 'action' => 'upload']) ?>" id="menu-upload">
+        <span class="has-tip tip-bottom" style="border-bottom: none;" title="Add photo"><i class="foundicon-add-doc"></i></span></a>&nbsp;&nbsp;&nbsp;
+    <a href="<?php echo $this->url('application/default', ['controller' => 'user', 'action' => 'logout']) ?>">
+        <span class="has-tip tip-bottom" style="border-bottom: none;" title="Logout"><i class="foundicon-unlock"></i></span></a>
+
+</section>
+
+<div id="loginModal" class="reveal-modal" style="border: 1px solid black">
+    <div style="float:left; padding-right:16px;"><?php echo $this->gravatar($this->zfcUserIdentity()->getEmail()) ?></div>
+    <h3>Hello, <?php echo $this->zfcUserDisplayName() ?>!</h3>
+    <a class="button round small" href="<?php echo $this->url('zfcuser/logout') ?>">Sign Out</a>
+    <div style="clear:both;"></div>
+    <a class="close-reveal-modal">&#215;</a>
+</div>
+
+<div id="uploadModal" style="border: 1px solid black;display: none;" class="row">
+</div>

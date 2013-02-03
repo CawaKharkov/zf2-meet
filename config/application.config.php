@@ -11,6 +11,7 @@ return array(
         'Application',
         'Test',
         'Admin',
+        //'RoleUserBridge'
 
     ),
     'module_listener_options' => array(

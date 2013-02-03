@@ -1,4 +1,4 @@
-<?
+<?php
 return array(
     'bjyauthorize' => array(
 
@@ -24,7 +24,9 @@ return array(
 * 'admin' inheriting from user
 */
             'BjyAuthorize\Provider\Role\Config' => array(
-                'guest' => array(),
+                'guest' =>array('children' => array(
+                    'user' => array(),
+                )),
                 'user' => array('children' => array(
                     'admin' => array(),
                 )),
@@ -82,9 +84,10 @@ return array(
                 //array('controller' => 'index', 'action' => 'index', 'roles' => array('guest','user')),
                 //array('controller' => 'index', 'action' => 'stuff', 'roles' => array('user')),
                 array('controller' => 'zfcuser', 'roles' => array('guest')),
-                array('controller' => 'Application\Controller\Index', 'roles' => array('admin')),
-                array('controller' => 'Application\Controller\User', 'roles' => array('admin')),
-                array('controller' => 'Application\Controller\News', 'roles' => array('admin')),
+                array('controller' => 'Application\Controller\Index', 'roles' => array('guest')),
+                array('controller' => 'Application\Controller\User', 'roles' => array('user')),
+                array('controller' => 'Application\Controller\User','action' => 'new' , 'roles' => array('guest')),
+                array('controller' => 'Application\Controller\News', 'roles' => array('guest')),
             ),
 
             /* If this guard is specified here (i.e. it is enabled), it will block

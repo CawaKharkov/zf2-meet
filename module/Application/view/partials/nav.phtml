@@ -4,23 +4,29 @@ $output .= '<ul class="left">';
 foreach ($this->container as $page) {
 
     if ($page->class == 'right') {
-        $output .= '</li></ul>';
-        $output .= '<section><ul class="right">';
-        foreach ($page as $p) {
-            $output .='<li>';
-            $output .= $this->navigation()->menu()->htmlify($p) . PHP_EOL;
-            $output .='</li>';
+        if ($this->zfcUserIdentity()) {
+            $output .= '</li></ul>';
+            $output .= $this->partial('partials/userwidget');
+        } else {
+            $output .= '</li></ul>';
+            $output .= '<section><ul class="right">';
+            foreach ($page as $p) {
+                $output .='<li>';
+                $output .= $this->navigation()->menu()->htmlify($p) . PHP_EOL;
+                $output .='</li>';
+            }
+            $output .='</ul>';
+            $output .='</section>';
         }
-        $output .='</ul>';
-        $output .='</section>';
     }
     $output .= '<li>';
     $output .= $this->navigation()->menu()->htmlify($page) . PHP_EOL;
     $output .='</li>';
 }
 $output .= '</ul></nav>';
+
 echo $output;
-?>
+?> 
 <div id="loginModal" class="reveal-modal" style="border: 1px solid black">
     <!-- Test if the User is connected -->
     <?php if (!$this->zfcUserIdentity()): ?>
@@ -28,7 +34,7 @@ echo $output;
     <?php else: ?>
         <div style="float:left; padding-right:16px;"><?php echo $this->gravatar($this->zfcUserIdentity()->getEmail()) ?></div>
         <h3>Hello, <?php echo $this->zfcUserDisplayName() ?>!</h3>
-        <a href="<?php echo $this->url('zfcuser/logout') ?>">[Sign Out]</a>
+        <a class="button round small" href="<?php echo $this->url('zfcuser/logout') ?>">Sign Out</a>
         <div style="clear:both;"></div>
 
     <?php endif; ?>

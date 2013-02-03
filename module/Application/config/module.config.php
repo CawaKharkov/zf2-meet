@@ -59,7 +59,7 @@ return array(
     'navigation' => [
         'default' => [
             'home' => [
-                'label' => 'ParadeBrides',
+                'label' => 'Attractive bride',
                 'route' => 'application',
                 'class' => 'name',
             ],
@@ -81,7 +81,7 @@ return array(
                 'controller' => 'news',
             ],
             'user' => [
-                'label' => 'User',
+                'label' => '',
                 'route' => 'application/default',
                 'class' => 'right',
                 'pages' =>[

@@ -6,6 +6,10 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
+    'RoleUserBridge\\Mapper\\RoleInterface' => $baseDir . '/vendor/darkmatus/roleuserbridge/src/RoleUserBridge/Mapper/RoleInterface.php',
+    'RoleUserBridge\\Mapper\\RoleMapper' => $baseDir . '/vendor/darkmatus/roleuserbridge/src/RoleUserBridge/Mapper/RoleMapper.php',
+    'RoleUserBridge\\Module' => $baseDir . '/vendor/darkmatus/roleuserbridge/Module.php',
+    'RoleUserBridge\\Service\\User' => $baseDir . '/vendor/darkmatus/roleuserbridge/src/RoleUserBridge/Service/User.php',
     'ZfcBase\\Module' => $baseDir . '/vendor/zf-commons/zfc-base/Module.php',
     'ZfcUserDoctrineORM\\Entity\\User' => $baseDir . '/vendor/zf-commons/zfc-user-doctrine-orm/src/ZfcUserDoctrineORM/Entity/User.php',
     'ZfcUserDoctrineORM\\Mapper\\User' => $baseDir . '/vendor/zf-commons/zfc-user-doctrine-orm/src/ZfcUserDoctrineORM/Mapper/User.php',

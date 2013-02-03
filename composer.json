@@ -8,8 +8,9 @@
     "minimum-stability":"alpha",
     "require": {
         "php": ">=5.3.3",
-        "zendframework/zendframework": "2.0.6",
+        "zendframework/zendframework": "2.1@alpha",
         "doctrine/doctrine-module": "dev-master",
+        "Darkmatus/RoleUserBridge": "dev-master",
         "doctrine/doctrine-orm-module": "0.*@alpha",
         "zf-commons/zfc-base": "dev-master",
         "zf-commons/zfc-user": "dev-master",

@@ -1,0 +1,14 @@
+<h3>Upload photo</h3>
+<?php
+$form = $this->form;
+$form->setAttribute('action',
+                    $this->url('application/default', //your route name ...
+                               array('controller'=>'user', 'action' => 'upload'))); 
+$form->prepare();
+
+echo $this->form()->openTag($form);
+echo $this->formRow($form->get('photoUpload'));
+
+echo $this->formSubmit($form->get('submit'));
+echo $this->form()->closeTag();
+?>

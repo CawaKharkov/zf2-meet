@@ -1,6 +1,6 @@
 <?php
-var_dump($this->container->removePage(4));
-var_dump($this->container->removePage(2));
+$this->container->removePage(4);
+$this->container->removePage(2);
 $p = $this->container->getPages();
 
 //die();
@@ -10,9 +10,9 @@ $p = $this->container->getPages();
     <?php foreach($p as $page) : ?>
     <li<?php echo $page->isActive() ? ' class="active"' : '' ?>>
     <?php if (!$page->isActive()) : ?>
-        <span class="has-tip" style="border-bottom: none;" title="<?php echo 'go to '.$page->label ?>"><?php echo $this->navigation()->menu()->htmlify($page) . PHP_EOL; ?></span>
+        <span class="has-tip tip-top" style="border-bottom: none;" title="<?php echo 'go to '.$page->label ?>"><?php echo $this->navigation()->menu()->htmlify($page) . PHP_EOL; ?></span>
     <?php else : ?>
-        <span class="has-tip" style="border-bottom: none;" title="<?php echo 'you are at '.$page->label ?>"><?php echo $page->label ?></span>
+        <span class="has-tip tip-top" style="border-bottom: none;" title="<?php echo 'you are at '.$page->label ?>"><?php echo $page->label ?></span>
     <?php endif ?>
     </li>
     <?php endforeach ?>

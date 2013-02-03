@@ -1,18 +1,21 @@
 $(window).load(function() {
     $('#featuredContent').orbit({
+        animation:'fade',
+        animationSpeed:1500,
         bulletThumbs:true,
         fluid: '12x3',
-        bullets:true,
-        directionalNav: true
+        bullets:true
+        //directionalNav: true
     });
 });
 
 
 
 $(document).ready(function() {
-
+    $(document).foundationClearing();
     $('.tabs').foundationTabs();
     $(document).foundationTooltips();
+    
     $('#menu-register').click(function(event) {
         event.preventDefault();
         var $div = $('#registerModal').addClass('reveal-modal').appendTo('body'),
@@ -30,6 +33,18 @@ $(document).ready(function() {
         return false;
     });
 
+
+     $('#menu-upload').click(function(event) {
+        event.preventDefault();
+        var $div = $('#uploadModal').addClass('reveal-modal').appendTo('body'),
+        $this = $(this);
+        //$div.empty().html('').append('×').reveal();
+        $.get($this.attr('href'), function(data) {
+            // alert($div.toSource());
+            return $div.empty().html(data).append('<a class="close-reveal-modal">&#215;</a>').reveal();
+        });
+
+    });
 /*/ text animation for slider
 $('#featuredContent').on('click',"img",function(event){
     // container is the DOM element;

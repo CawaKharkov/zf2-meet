@@ -3,28 +3,26 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <?php echo $this->headTitle('Главная')->setSeparator(' - ')->setAutoEscape(false) ?>
+        <?php echo $this->headTitle($this->controllerName())->setSeparator(' - ')->setAutoEscape(false) ?>
         <?php echo $this->headMeta()->appendName('viewport', 'width=device-width, initial-scale=1.0') ?>
         <?php echo $this->headLink(array('rel' => 'shortcut icon', 'type' => 'image/vnd.microsoft.icon', 'href' => $this->basePath() . '/images/favicon.ico')) ?>
         <?php echo $this->headScript() . PHP_EOL ?>
      <script>
          $(document).ready(function() {
 
-
-
          });
      </script>
     </head>
     <body>
-        <?php var_dump($this->var) ?>
         <!-- Main Menu -->
         <?php //echo $this->partial('/partials/main_menu')
                 $this->navigation('Navigation')->menu()->setPartial('partials/nav.phtml');
                 echo $this->navigation('Navigation')->menu()->render();
         ?>
-
+        
         <!-- Header -->
         <header class="row" id="header">
+            
 
         </header><!-- END header -->
 

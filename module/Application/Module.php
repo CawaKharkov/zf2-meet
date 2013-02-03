@@ -83,11 +83,14 @@ class Module
         $helperManager->get('headmeta')->setCharset('utf-8')
                                        ->setName('viewport', 'width=device-width, initial-scale=1.0');
 
-        $helperManager->get('headtitle')->set('test');
+        $helperManager->get('headtitle')->set('Attractive bride');
 
         $helperManager->get('headlink')->appendStylesheet('//ajax.googleapis.com/ajax/libs/jqueryui/1.9.0/themes/base/jquery-ui.css')
                                        ->appendStylesheet('/css/foundation.min.css')
                                        ->appendStylesheet('/css/app.css')
+                                       ->appendStylesheet('/images/ico/foundation_icons_general/stylesheets/general_foundicons.css')
+                                       //->appendStylesheet('/images/ico/foundation_icons_general_enclosed/stylesheets/general_enclosed_foundicons.css')
+                                       
                                        ->appendStylesheet('/css/main.css');
 
         $helperManager->get('headscript')->appendFile('//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js')
@@ -95,7 +98,8 @@ class Module
                                          ->appendFile('/js/modernizr.foundation.js')
                                          ->appendFile('/js/foundation.min.js')
                                          ->appendFile('//ajax.googleapis.com/ajax/libs/jqueryui/1.9.0/jquery-ui.min.js')
-                                         ->appendFile('/js/main.js');
+                                         ->appendFile('/js/main.js')
+                                         ->appendFile('/js/footer.js');
     }
 
 
